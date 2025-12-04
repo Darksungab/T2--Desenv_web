@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="T2 desenv. web - CNB">
+        <meta name="author" content="Gabriel Figueiredo Ribeiro">
+        <title>CNB - Cadastro Nacional de Bicicletas - Pagina inicial</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <h2>Cadastre sua Bicicleta!</h2>
+            <div class="nav-buttons">
+                <a href="index.html">
+                    <button id="inicial">Pagina Inicial</button>
+                </a>
+                <a href="Cadastro.html">
+                    <button id="cadastro" class="btn-ativo">Area de Cadastro</button>                
+                </a>
+                <a href="Nós.html">
+                    <button id="nós">Sobre nós</button>                
+                </a>
+            </div>
+        </nav>
+
+        <h1>Bem vindo(a) Area de Cadastro!</h1>
+        <form action="processar_cadastro.php" method="POST">
+            <fieldset>
+                <div>
+                    <label for="numero-serie">Número de Série da Bicicleta:</label>
+                    <input type="text" id="numero-serie" name="numero_serie" required placeholder="Ex: BS123456789" maxlength="20">
+                </div>
+        
+                <div>
+                    <label for="marca">Marca da Bicicleta:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Ex: Caloi, Oggi, etc.">
+                </div>
+                <div>
+                    <label for="modelo">Modelo da Bicicleta:</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Ex: Mountain Bike, Speed, etc.">
+                </div>
+        
+                <div>
+                    <label for="cor">Cor Principal:</label>
+                    <input type="text" id="cor" name="cor" placeholder="Ex: Vermelha, Preta, etc.">
+                </div>
+        
+                <div>
+                    <label for="nome-dono">Seu Nome:</label>
+                    <input type="text" id="nome-dono" name="nome_dono" required>
+                </div>
+                <div>
+                    <label for="email">E-mail para contato:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                </div>
+                <div>
+                    <label for="data-compra">Data de Compra (aproximada):</label>
+                    <input type="date" id="data-compra" name="data_compra">
+                </div>
+                <div>
+                    <label>
+                    <input type="checkbox" name="termos" required>Concordo com os termos de uso e privacidade
+                    </label>
+                </div>
+        
+        <button type="submit" class="form-button">Cadastrar Bicicleta</button>
+        <button type="reset" class="form-button">Limpar Formulário</button>
+        <section>
+            <h3>Onde encontrar o número de série?</h3>
+            <p>O número de série geralmente está localizado:</p>
+            <ul>
+                <li>Na parte inferior do quadro (baixo do pedal)</li>
+                <li>No garfo dianteiro</li>
+                <li>No suporte do selim</li>
+                <li>Na nota fiscal da bicicleta</li>
+            </ul>
+        </section>
+            </fieldset>
+        </form>
+    </body>
+</html>
