@@ -6,7 +6,7 @@
 
 <h3>Intregrantes:</h3>
 
-<p>Gabriel Figueiredo; Beatriz Silva;</p>
-<p>Alesson Figueiredo; Flavia</p>
+<p>Gabriel Figueiredo; Beatriz Santos Silva;</p>
+<p>Alleson Sales; Flavia Alessandra</p>
 
 <br>
