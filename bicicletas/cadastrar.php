@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $marca = $data["marca"];
     $cor = $data["cor"];
     $categoria = $data["categoria"];
+    $data_registro = date("Y-m-d H:i:s");
     
 
     $stmt = $conn->prepare("SELECT id FROM bicicletas WHERE registro = ?");
@@ -21,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $stmt = $conn->prepare("INSERT INTO bicicletas (registro, marca, cor, categoria) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $registro, $marca, $cor, $categoria);
+    $stmt = $conn->prepare("INSERT INTO bicicletas (registro, marca, cor, categoria, data_registro) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $registro, $marca, $cor, $categoria, $data_registro);
 
     
     if ($stmt->execute() === TRUE) {
